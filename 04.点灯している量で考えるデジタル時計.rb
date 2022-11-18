@@ -1,9 +1,8 @@
 N = 30
 
-def check(num)
-    # 配列の添字が各時分秒を、格納されている値が点灯数を示している
+def check(n)
     light = [6, 2, 5, 5, 4, 5, 6, 3, 7, 6]
-    light[num / 10] + light[num % 10]
+    light[n / 10] + light[n % 10]
 end
 
 cnt = 0
@@ -14,4 +13,5 @@ cnt = 0
         end
     end
 end
+
 puts cnt
