@@ -11,13 +11,12 @@ def count(n)
 end
 
 row = [0] * (N+1)
-row[0] = 1
+row[0] = 1 #パスカル三角形の1つ目の要素は必ず1になる
 
-N.times do |i|
+N.times do |i| #行数だけ繰り返す
     (i + 1).downto(1) do |j|
-        row[j] += row[j - 1]
-        p [i, j]
+        row[j] += row[j-1] 
     end
 end
 
-puts row.map{|i| count(i)}.inject(:+)
+puts row.map{|i| count(i)}.inject(:+) #inject(:+)は合計値を算出する
